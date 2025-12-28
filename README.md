@@ -1,0 +1,1 @@
+project generated from io.inugami.maven:inugami_maven_springboot 
