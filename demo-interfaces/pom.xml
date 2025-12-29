@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!--================================================================================================================
+    = MAVEN
+    =================================================================================================================-->
+  <prerequisites>
+    <maven>3.2.3</maven>
+  </prerequisites>
+  <!--================================================================================================================
+    = PARENT
+    =================================================================================================================-->
+  <parent>
+    <groupId>com.my.project</groupId>
+    <artifactId>demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <!--================================================================================================================
+    = PROJECT
+    =================================================================================================================-->
+  <artifactId>demo-interfaces</artifactId>
+  <packaging>pom</packaging>
+  <properties>
+    <jacoco.report.path.relative>../../</jacoco.report.path.relative>
+  </properties>
+  <!--================================================================================================================
+    = MODULES
+    =================================================================================================================-->
+  <modules>
+    <module>demo-interfaces-api</module>
+    <module>demo-interfaces-core</module>
+    <module>demo-interfaces-feign</module>
+  </modules>
+</project>

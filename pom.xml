@@ -70,6 +70,9 @@
             **/*Entity.java,
             **/api/**/I*.java
         </sonar.cpd.exclusions>
+    <sonar.issue.ignore.multicriteria>e1</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S1710</sonar.issue.ignore.multicriteria.e1.ruleKey>
+    <sonar.issue.ignore.multicriteria.e1.resourceKey>**/*.java</sonar.issue.ignore.multicriteria.e1.resourceKey>
     <maven-owasp.enabled>false</maven-owasp.enabled>
     <!--+++ versions ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <cglib.version>3.3.0</cglib.version>
@@ -81,8 +84,9 @@
     <commons-lang.version>2.6</commons-lang.version>
     <io.dropwizard.metrics.version>4.0.5</io.dropwizard.metrics.version>
     <io.github.openfeign.version>13.6</io.github.openfeign.version>
-    <io.inugami.version>4.2.2-SNAPSHOT</io.inugami.version>
+    <io.inugami.version>4.2.2</io.inugami.version>
     <io.swagger.core.v3.version>2.2.41</io.swagger.core.v3.version>
+    <io.rest-assured.version>5.5.0</io.rest-assured.version>
     <jacoco.version>0.8.14</jacoco.version>
     <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
     <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
@@ -95,6 +99,7 @@
     <org.jspecify.version>1.0.0</org.jspecify.version>
     <org.junit.jupiter>5.11.4</org.junit.jupiter>
     <org.junit.platform.version>1.11.4</org.junit.platform.version>
+    <org.hamcrest.version>2.1</org.hamcrest.version>
     <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
     <org.mockito.junit.version>2.23.0</org.mockito.junit.version>
     <org.owasp.version>8.1.2</org.owasp.version>
@@ -140,6 +145,16 @@
       <dependency>
         <groupId>com.my.project</groupId>
         <artifactId>demo-infrastructure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.my.project</groupId>
+        <artifactId>demo-interfaces-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.my.project</groupId>
+        <artifactId>demo-interfaces-core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <!--+++ inugami_framework +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -300,6 +315,11 @@
         </exclusions>
       </dependency>
       <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>${io.rest-assured.version}</version>
+      </dependency>
+      <dependency>
         <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
         <version>${jakarta.servlet.version}</version>
@@ -338,6 +358,11 @@
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-commons</artifactId>
         <version>${org.junit.platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>${org.hamcrest.version}</version>
       </dependency>
       <dependency>
         <groupId>org.mapstruct</groupId>
@@ -825,5 +850,7 @@
     <module>demo-api</module>
     <module>demo-core</module>
     <module>demo-infrastructure</module>
+    <module>demo-webapp</module>
+    <module>demo-interfaces</module>
   </modules>
 </project>
