@@ -3,11 +3,29 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>[%d{dd/MM HH:mm:ss}]|%logger|%-5level|%thread|%msg\n</pattern>
+            <pattern>[%d{dd/MM HH:mm:ss}]|%logger|%-5level|%thread| %X{errorCode} | %msg\n</pattern>
         </encoder>
     </appender>
+
+    <appender name="ELASTIC" class="io.inugami.logs.obfuscator.appender.JsonAppender">
+        <configuration>
+            <encodeAsJson>true</encodeAsJson>
+            <mode>elasticSearch</mode>
+            <host>http://localhost:9200</host>
+            <additionalFields>
+                {
+                "additionalField":"test"
+                }
+            </additionalFields>
+        </configuration>
+    </appender>
+
+
     <appender name="ASYNC_STDOUT" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="STDOUT" />
+    </appender>
+    <appender name="ASYNC_ELASTIC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="ELASTIC" />
     </appender>
 
     <logger name="org.springframework">

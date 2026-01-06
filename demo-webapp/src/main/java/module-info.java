@@ -19,4 +19,7 @@ open module com.my.project.webapp {
     requires spring.boot.starter.tomcat;
     requires spring.boot;
     requires spring.context;
+    requires org.jspecify;
+    requires spring.tx;
+
 }

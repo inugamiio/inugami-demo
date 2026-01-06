@@ -4,12 +4,17 @@ application:
   version: "@project.version@"
   commitId: "@commitId@"
   commitDate: "@commitDate@"
+  name: "demo"
+  wiki: "https://inugami.io/mock/error/{0}/{1}"
 inugami:
   monitoring:
     interceptor:
       url:
         skip: .*api-docs.*;.*swagger-ui.*
-
+    exception:
+      show:
+        detail:
+          enabled: true
 jpa:
   database-platform: org.hibernate.dialect.H2Dialect
   hibernate:
@@ -37,3 +42,5 @@ spring:
 springdoc:
   api-docs:
     path: /api-docs
+
+

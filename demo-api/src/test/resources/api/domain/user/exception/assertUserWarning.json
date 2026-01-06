@@ -1,0 +1,6 @@
+[ {
+  "warningCode" : "WARN-USER-2_0",
+  "warningMessage" : "some providers can't retrieve user's information",
+  "warningCategory" : "providers",
+  "warningDomain" : "USER"
+} ]

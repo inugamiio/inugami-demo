@@ -5,6 +5,8 @@ import com.my.project.api.domain.user.IUserService;
 import com.my.project.api.domain.user.dto.UserDTO;
 import com.my.project.api.domain.user.dto.UserDTOSearchRequestDTO;
 import com.my.project.api.domain.user.dto.UserFilters;
+import com.my.project.api.domain.user.exception.UserWarning;
+import io.inugami.framework.api.exceptions.WarningContext;
 import io.inugami.framework.interfaces.models.search.SearchResponse;
 import io.inugami.framework.interfaces.tools.ListUtils;
 import lombok.RequiredArgsConstructor;
@@ -95,6 +97,8 @@ public class UserService implements IUserService {
         assertRegexMatch(READ_USER_UID_REQUIRED, UID_REGEX, id);
 
         final var result = userDao.getById(id, full);
+
+        WarningContext.getInstance().addWarnings(UserWarning.READ_PARTIAL_INFO);
 
         assertNotNull(READ_USER_NOT_FOUND, result);
         return result;
