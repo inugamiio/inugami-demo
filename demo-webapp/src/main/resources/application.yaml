@@ -1,3 +1,5 @@
+env: DEV
+
 application:
   groupId: "@project.groupId@"
   artifactId: "@project.artifactId@"
@@ -6,8 +8,12 @@ application:
   commitDate: "@commitDate@"
   name: "demo"
   wiki: "https://inugami.io/mock/error/{0}/{1}"
+  instanceName: "inu"
+  instanceNumber: "001"
 inugami:
   monitoring:
+    iolog:
+      enabled: false
     interceptor:
       url:
         skip: .*api-docs.*;.*swagger-ui.*
