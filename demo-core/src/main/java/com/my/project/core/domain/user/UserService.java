@@ -8,15 +8,16 @@ import com.my.project.api.domain.user.dto.UserFilters;
 import com.my.project.api.domain.user.exception.UserWarning;
 import io.inugami.framework.api.exceptions.WarningContext;
 import io.inugami.framework.interfaces.models.search.SearchResponse;
+import io.inugami.framework.interfaces.monitoring.models.GenericModelCallType;
+import io.inugami.framework.interfaces.monitoring.models.GenericModelCounterType;
+import io.inugami.framework.interfaces.monitoring.models.GenericMonitoringModelDTO;
 import io.inugami.framework.interfaces.tools.ListUtils;
+import io.inugami.monitoring.core.sensors.ServicesSensor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static com.my.project.api.domain.user.exception.UserErrors.*;
 import static io.inugami.framework.interfaces.exceptions.Asserts.*;
@@ -80,14 +81,41 @@ public class UserService implements IUserService {
                                                  .build(), EMAIL_REGEX, v.getEmail());
                     });
 
+        addKpi(values);
         return userDao.create(values);
     }
+
+    protected void addKpi(final Collection<UserDTO> values) {
+        Map<String, Long> buffer = new LinkedHashMap<>();
+        for (var user : values) {
+            final String domain = user.getEmail().split("@")[1];
+            if (buffer.containsKey(domain)) {
+                buffer.put(domain, buffer.get(domain) + 1);
+            } else {
+                buffer.put(domain, 1L);
+            }
+        }
+
+        for (var entry : buffer.entrySet()) {
+            ServicesSensor.addData(List.of(GenericMonitoringModelDTO.builder()
+                                                                    .addCallType(GenericModelCallType.REST)
+                                                                    .addCounterType(GenericModelCounterType.HITS)
+                                                                    .service("user")
+                                                                    .subService("email_domain")
+                                                                    .valueType(entry.getKey())
+                                                                    .value(entry.getValue())
+                                                                    .build()));
+        }
+
+    }
+
 
     //==================================================================================================================
     // READ
     //==================================================================================================================
     @Override
     public SearchResponse<UserDTO> search(final UserDTOSearchRequestDTO searchRequest) {
+
         return userDao.search(Optional.ofNullable(searchRequest).orElse(UserDTOSearchRequestDTO.builder().build()),
                               UserFilters.FILTERS);
     }

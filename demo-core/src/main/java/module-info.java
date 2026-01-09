@@ -5,6 +5,7 @@ open module com.my.project.core {
     requires io.inugami.framework.configurations.configuration;
     requires io.inugami.framework.api;
     requires io.inugami.framework.interfaces;
+    requires io.inugami.monitoring.core;
     requires jakarta.annotation;
     requires jdk.compiler;
     requires lombok;
@@ -16,6 +17,7 @@ open module com.my.project.core {
     requires spring.tx;
     //
     requires com.my.project.api;
+    requires annotations;
     //
     exports com.my.project.core.domain.user;
 }

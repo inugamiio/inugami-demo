@@ -5,6 +5,7 @@ target
 *.iml
 *.iws
 !.idea/runConfigurations/
+elasticsearch/data
 .metadata
 .project
 .settings
@@ -48,3 +49,4 @@ dependency-reduced-pom.xml
 pom.xml.versionsBackup
 /legacy/
 /legacy/__inugami/
+/local-integration-test/elasticsearch/data/

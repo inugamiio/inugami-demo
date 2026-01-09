@@ -12,6 +12,11 @@ application:
   instanceNumber: "001"
 inugami:
   monitoring:
+    interceptors:
+      kpi:
+        enabled: true
+    internal:
+      interval: 10000
     iolog:
       enabled: false
     interceptor:

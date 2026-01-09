@@ -143,17 +143,21 @@
     <logger name="IOLOG" additivity="false">
         <level value="INFO"/>
         <appender-ref ref="ELASTIC-IOLOG" />
+        <appender-ref ref="ASYNC_STDOUT" />
+
     </logger>
 
     <logger name="PARTNERLOG" additivity="false">
         <level value="INFO"/>
         <appender-ref ref="ELASTIC-PARTNERLOG" />
+        <appender-ref ref="ASYNC_STDOUT" />
     </logger>
 
 
     <logger name="XLLOG" additivity="false">
         <level value="INFO"/>
         <appender-ref ref="ELASTIC-XLLOG" />
+        <appender-ref ref="ASYNC_STDOUT" />
     </logger>
 
     <logger name="METRICS_LOG_SENDER" additivity="false">
