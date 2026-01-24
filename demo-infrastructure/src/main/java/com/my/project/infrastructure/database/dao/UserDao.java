@@ -10,6 +10,7 @@ import com.my.project.infrastructure.database.mapper.UserEntityMapper;
 import com.my.project.infrastructure.database.repository.UserEntityRepository;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.JPAExpressions;
 import io.inugami.framework.commons.spring.data.utils.SearchResponseUtils;
 import io.inugami.framework.interfaces.models.search.QueryFilterDTO;
 import io.inugami.framework.interfaces.models.search.SearchResponse;
@@ -66,7 +67,6 @@ public class UserDao implements IUserDao {
 
     private Predicate buildPredicate(final UserDTOSearchRequestDTO request) {
         final List<BooleanExpression> predicates = new ArrayList<>();
-
         produceStringContains(request.getFirstName(), QUserEntity.userEntity.firstName, predicates::add);
         produceStringContains(request.getLastName(), QUserEntity.userEntity.lastName, predicates::add);
         produceStringIn(request.getEmail(), QUserEntity.userEntity.email, predicates::add);

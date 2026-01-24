@@ -18,7 +18,8 @@ public class UserDTOSearchRequestDTO implements SearchRequest , Serializable {
     private static final long         serialVersionUID = -6646958578723667636L;
     // SearchRequest
     private Integer                   page;
-    private Integer                   pageSize;
+    @Builder.Default
+    private Integer                   pageSize = 20;
     private String                    sortFields;
     private SortOrder                 sortOrder;
     @Singular("createdBy")

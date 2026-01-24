@@ -48,6 +48,13 @@ public enum UserErrors implements ErrorCode {
                                      .statusCode(400)
                                      .errorTypeFunctional()),
 
+    CREATE_FIRSTNAME_SECURITY(newBuilder().errorCode("USER-1_5")
+                                     .message("injection detected in user first name")
+                                     .domain(Constants.USER)
+                                     .statusCode(400)
+                                     .errorTypeSecurity()),
+
+
     //==================================================================================================================
     // 2 - READ
     //==================================================================================================================
@@ -60,6 +67,12 @@ public enum UserErrors implements ErrorCode {
                                     .message("user not found")
                                     .domain(Constants.USER)
                                     .statusCode(404)
+                                    .errorTypeFunctional()),
+
+    SEARCH_PAGE_SIZE_INVALID(newBuilder().errorCode("USER-2_2")
+                                    .message("search page size too big")
+                                    .domain(Constants.USER)
+                                    .statusCode(400)
                                     .errorTypeFunctional()),
     //==================================================================================================================
     // 3 - UPDATE

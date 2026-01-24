@@ -8,4 +8,6 @@ open module com.my.project.interfaces.api {
 
     exports com.my.project.interfaces.api.domain.user;
     exports com.my.project.interfaces.api.domain.user.dto;
+    exports com.my.project.interfaces.api.domain.weather;
+    exports com.my.project.interfaces.api.domain.weather.dto;
 }

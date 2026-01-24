@@ -46,7 +46,6 @@ public class UserKpiExtractor implements KpiExtractorSPI {
 
     @Override
     public List<GenericMonitoringModelDTO> extractFromRequest(final KpiExtractorContext context) {
-        log.info("");
         return List.of(GenericMonitoringModelDTO.builder()
                                                 .service("demo")
                                                 .subService("user_request")
@@ -57,10 +56,8 @@ public class UserKpiExtractor implements KpiExtractorSPI {
     // =================================================================================================================
     // ON BEGIN
     // =================================================================================================================
-
     @Override
     public List<GenericMonitoringModelDTO> extractFromResponse(final KpiExtractorContext context) {
-        log.info("");
         return List.of(GenericMonitoringModelDTO.builder()
                                                 .service("demo")
                                                 .subService("user_response")

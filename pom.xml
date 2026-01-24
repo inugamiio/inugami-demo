@@ -84,7 +84,7 @@
     <commons-lang.version>2.6</commons-lang.version>
     <io.dropwizard.metrics.version>4.0.5</io.dropwizard.metrics.version>
     <io.github.openfeign.version>13.6</io.github.openfeign.version>
-    <io.inugami.version>4.2.4</io.inugami.version>
+    <io.inugami.version>4.2.5-SNAPSHOT</io.inugami.version>
     <io.swagger.core.v3.version>2.2.41</io.swagger.core.v3.version>
     <io.rest-assured.version>5.5.0</io.rest-assured.version>
     <jacoco.version>0.8.14</jacoco.version>

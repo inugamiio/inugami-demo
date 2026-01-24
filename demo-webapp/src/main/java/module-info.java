@@ -9,10 +9,12 @@ open module com.my.project.webapp {
     requires io.inugami.framework.commons.spring;
     requires io.inugami.framework.commons;
     requires io.inugami.framework.interfaces;
-    requires io.inugami.monitoring.springboot;
-    requires io.inugami.monitoring.sensors.defaults;
+    requires io.inugami.logs.obfuscator;
     requires io.inugami.monitoring.providers.logs;
+    requires io.inugami.monitoring.sensors.defaults;
+    requires io.inugami.monitoring.springboot;
     requires lombok;
+    requires org.jspecify;
     requires org.mapstruct;
     requires org.slf4j;
     requires org.springdoc.openapi.ui;
@@ -22,7 +24,5 @@ open module com.my.project.webapp {
     requires spring.boot.starter.tomcat;
     requires spring.boot;
     requires spring.context;
-    requires org.jspecify;
     requires spring.tx;
-
 }

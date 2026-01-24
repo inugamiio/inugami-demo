@@ -14,8 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static com.my.project.api.domain.user.exception.UserErrors.*;
-import static io.inugami.commons.test.UnitTestHelper.assertText;
-import static io.inugami.commons.test.UnitTestHelper.assertThrows;
+import static io.inugami.commons.test.UnitTestHelper.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -124,22 +123,45 @@ class UserServiceTest {
     @Test
     void getById_nominal() {
         when(userDao.getById(UnitTestData.UID, true)).thenReturn(buildUserDTO());
-        assertText(userService.getById(UnitTestData.UID, true),
+
+        assertLogs(() -> assertText(userService.getById(UnitTestData.UID, true),
+                                    """
+                                            {
+                                              "audit" : {
+                                                "createdBy" : "system",
+                                                "createdDate" : "2023-05-27T12:00:00",
+                                                "lastModifiedBy" : "user-1",
+                                                "lastModifiedDate" : "2023-06-01T12:00:00",
+                                                "version" : 1
+                                              },
+                                              "email" : "john.smith@mock.org",
+                                              "firstName" : "John",
+                                              "lastName" : "Smith",
+                                              "uid" : "bb895294-efe7-484b-b670-14d004eaf461"
+                                            }
+                                            """),
+                   UserService.class,
                    """
-                           {
-                             "audit" : {
-                               "createdBy" : "system",
-                               "createdDate" : "2023-05-27T12:00:00",
-                               "lastModifiedBy" : "user-1",
-                               "lastModifiedDate" : "2023-06-01T12:00:00",
-                               "version" : 1
-                             },
-                             "email" : "john.smith@mock.org",
-                             "firstName" : "John",
-                             "lastName" : "Smith",
-                             "uid" : "bb895294-efe7-484b-b670-14d004eaf461"
-                           }
-                           """);
+                           [
+                               {
+                                   "loggerName":"com.my.project.core.domain.user.UserService",
+                                   "level":"INFO",
+                                   "mdc":{}
+                                   "message":[
+                                       "search user : ",
+                                       "uid:	bb895294-efe7-484b-b670-14d004eaf461",
+                                       "full:	true"
+                                   ]
+                               },
+                               {
+                                   "loggerName":"com.my.project.core.domain.user.UserService",
+                                   "level":"DEBUG",
+                                   "mdc":{}
+                                   "message":"found user : UserDTO(uid=bb895294-efe7-484b-b670-14d004eaf461, firstName=John, lastName=Smith, email=john.smith@mock.org)"
+                               }
+                           ]
+                           """
+                  );
     }
 
     @Test

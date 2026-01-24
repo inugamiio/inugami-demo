@@ -14,6 +14,7 @@ import io.inugami.framework.interfaces.monitoring.models.GenericMonitoringModelD
 import io.inugami.framework.interfaces.tools.ListUtils;
 import io.inugami.monitoring.core.sensors.ServicesSensor;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.text.StringEscapeUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -56,6 +57,10 @@ public class UserService implements IUserService {
                                                .addField(FIELD_FIRSTNAME, index)
                                                .build(), v.getFirstName());
                         v.setFirstName(v.getFirstName().trim());
+                        assertEquals(CREATE_FIRSTNAME_SECURITY,
+                                     StringEscapeUtils.escapeEcmaScript(v.getFirstName()),
+                                     v.getFirstName());
+
                         assertLowerOrEquals(fromErrorCode(CREATE_FIRSTNAME_INVALID)
                                                     .addField(FIELD_FIRSTNAME, index)
                                                     .build(), MAX_SIZE, v.getFirstName().length());
@@ -115,8 +120,10 @@ public class UserService implements IUserService {
     //==================================================================================================================
     @Override
     public SearchResponse<UserDTO> search(final UserDTOSearchRequestDTO searchRequest) {
-
-        return userDao.search(Optional.ofNullable(searchRequest).orElse(UserDTOSearchRequestDTO.builder().build()),
+        final var request = Optional.ofNullable(searchRequest)
+                                    .orElse(UserDTOSearchRequestDTO.builder().build());
+        assertLowerOrEquals(SEARCH_PAGE_SIZE_INVALID, 200,request.getPageSize().intValue());
+        return userDao.search(request,
                               UserFilters.FILTERS);
     }
 

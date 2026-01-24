@@ -5,7 +5,7 @@
     =================================================================================================================-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>[%d{dd/MM HH:mm:ss}]|%logger|%-5level|%thread|%msg\n</pattern>
+            <pattern>[%d{dd/MM HH:mm:ss}]|%logger|%-5level|%thread|%X{traceId}|%msg\n</pattern>
         </encoder>
     </appender>
     <appender name="ASYNC_STDOUT" class="ch.qos.logback.classic.AsyncAppender">

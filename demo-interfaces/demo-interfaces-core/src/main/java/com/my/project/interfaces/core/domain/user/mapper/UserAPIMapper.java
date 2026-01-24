@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-@Mapper
+@Mapper()
 public interface UserAPIMapper {
 
     UserAPI convertToRest(final UserDTO value);

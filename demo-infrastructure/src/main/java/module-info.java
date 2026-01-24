@@ -28,6 +28,9 @@ open module com.my.project.infrastructure {
     requires spring.tx;
     //
     requires com.my.project.api;
+    requires spring.cloud.openfeign.core;
+    requires spring.web;
+    requires feign.core;
     //
     exports com.my.project.infrastructure.database.dao;
     exports com.my.project.infrastructure.database.entity;

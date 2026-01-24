@@ -25,7 +25,7 @@ inugami:
     exception:
       show:
         detail:
-          enabled: true
+          enabled: false
 jpa:
   database-platform: org.hibernate.dialect.H2Dialect
   hibernate:

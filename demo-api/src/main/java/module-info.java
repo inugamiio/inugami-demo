@@ -7,4 +7,7 @@ open module com.my.project.api {
     exports com.my.project.api.domain.user;
     exports com.my.project.api.domain.user.dto;
     exports com.my.project.api.domain.user.exception;
+    exports com.my.project.api.domain.weather;
+    exports com.my.project.api.domain.weather.dto;
+    exports com.my.project.api.domain.weather.exception;
 }

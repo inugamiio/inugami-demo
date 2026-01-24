@@ -18,6 +18,7 @@ open module com.my.project.core {
     //
     requires com.my.project.api;
     requires annotations;
+    requires org.apache.commons.text;
     //
     exports com.my.project.core.domain.user;
 }
