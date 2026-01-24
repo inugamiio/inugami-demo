@@ -42,7 +42,7 @@ class UserRestControllerTest {
     private static final String UPDATE_FORCE = BASE_FOLDER + "updateForce";
     private static final String UPDATE       = BASE_FOLDER + "update";
     private static final String DELETE       = BASE_FOLDER + "delete";
-    public static final  String BASE_PATH    = "/user";
+    public static final  String BASE_PATH    = "ws/user";
 
     @Mock
     private IUserService userService;

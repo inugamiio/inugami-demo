@@ -10,6 +10,7 @@ open module com.my.project.infrastructure {
     requires io.inugami.framework.commons;
     requires io.inugami.framework.configurations.configuration;
     requires io.inugami.framework.interfaces;
+    requires io.inugami.monitoring.springboot;
     requires jakarta.annotation;
     requires jakarta.persistence;
     requires jdk.compiler;

@@ -1,0 +1,1 @@
+WeatherConditionDTO(temperature=2.1, weathercode=3, time=2023-06-01T12:00)

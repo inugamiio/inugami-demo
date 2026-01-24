@@ -2,18 +2,18 @@
   "contentType" : "application/json",
   "encoding" : "UTF-8",
   "requestHeaders" : {
-    "x-device-identifier" : "a2353340-7847-450e-9f4c-72753ecb1e98",
-    "x-correlation-id" : "e31eb678-3dcd-4473-9172-b2891e1e15b1"
+    "x-device-identifier" : "981017ac-6a1a-4017-9a4b-75dc63614d13",
+    "x-correlation-id" : "30692493-495b-4f48-8450-47bc6ee154ce"
   },
   "requestOptions" : {
     "uid" : [ "bb895294-efe7-484b-b670-14d004eaf461" ]
   },
   "responseHeaders" : {
-    "x-device-identifier" : "a2353340-7847-450e-9f4c-72753ecb1e98",
-    "x-correlation-id" : "e31eb678-3dcd-4473-9172-b2891e1e15b1",
-    "x-b3-traceid" : "8344b254-f97b-4eb1-9052-c1ba572f784e"
+    "x-device-identifier" : "981017ac-6a1a-4017-9a4b-75dc63614d13",
+    "x-correlation-id" : "30692493-495b-4f48-8450-47bc6ee154ce",
+    "x-b3-traceid" : "3c69a5fa-13d9-47ca-904c-1b4cdc1055f6"
   },
   "status" : 200,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "DELETE"
 }

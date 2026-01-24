@@ -1,0 +1,20 @@
+{
+  "contentType" : "application/json",
+  "encoding" : "UTF-8",
+  "requestHeaders" : {
+    "x-device-identifier" : "f566e6d9-e3a0-4fe3-a124-cb782c009b74",
+    "x-correlation-id" : "aff557fb-a951-4cdf-bbde-f25f9b92165c"
+  },
+  "requestParams" : {
+    "city" : "versoix"
+  },
+  "response" : "{\n  \"code\" : \"OVERCAST\",\n  \"elevation\" : 387.0,\n  \"icon\" : \"cloudy-dense\",\n  \"label\" : \"cloudy-dense\",\n  \"latitude\" : 46.28,\n  \"longitude\" : 6.1599994,\n  \"temperature\" : 2.1,\n  \"time\" : \"2023-06-01T12:00:00\",\n  \"weathercode\" : 3,\n  \"windspeed\" : 8.6\n}",
+  "responseHeaders" : {
+    "x-device-identifier" : "f566e6d9-e3a0-4fe3-a124-cb782c009b74",
+    "x-correlation-id" : "aff557fb-a951-4cdf-bbde-f25f9b92165c",
+    "x-b3-traceid" : "836a9949-f042-43c0-956f-507c4709a163"
+  },
+  "status" : 200,
+  "url" : "ws/weather/{city}",
+  "verb" : "GET"
+}

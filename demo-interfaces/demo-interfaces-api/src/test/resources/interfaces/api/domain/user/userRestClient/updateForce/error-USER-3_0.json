@@ -13,15 +13,15 @@
   },
   "request" : "[ {\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\",\n  \"uid\" : \"bb895294-efe7-484b-b670-14d004eaf461\"\n} ]",
   "requestHeaders" : {
-    "x-device-identifier" : "e68786a2-c536-4583-88f4-253fb96275d1",
-    "x-correlation-id" : "92b380be-906c-4987-9b10-fa95d6d1b05a"
+    "x-device-identifier" : "abfde09b-a7dd-40aa-a63c-8ab1a984f22c",
+    "x-correlation-id" : "3e63f08d-52e0-4665-82c0-43f13ce167b8"
   },
   "responseHeaders" : {
-    "x-device-identifier" : "e68786a2-c536-4583-88f4-253fb96275d1",
-    "x-correlation-id" : "92b380be-906c-4987-9b10-fa95d6d1b05a",
-    "x-b3-traceid" : "366fc7c4-17f3-48f7-a93f-ee506bd3b9d8"
+    "x-device-identifier" : "abfde09b-a7dd-40aa-a63c-8ab1a984f22c",
+    "x-correlation-id" : "3e63f08d-52e0-4665-82c0-43f13ce167b8",
+    "x-b3-traceid" : "f85a6a36-a6cc-4281-8530-16248cbb2846"
   },
   "status" : 400,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "PUT"
 }

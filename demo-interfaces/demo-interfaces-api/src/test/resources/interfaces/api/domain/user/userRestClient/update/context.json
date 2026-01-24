@@ -2,16 +2,16 @@
   "contentType" : "application/json",
   "encoding" : "UTF-8",
   "requestHeaders" : {
-    "x-device-identifier" : "a7ce26d4-b3d5-43e3-b845-811eca457ba9",
-    "x-correlation-id" : "9105ff0f-5aaf-445c-afb2-f2337ca8f51d"
+    "x-device-identifier" : "aa0dfafd-8880-4901-b5f9-2e8d8bcb0c50",
+    "x-correlation-id" : "ac1fe45f-fd0d-4db4-920e-60a2ec4ff041"
   },
   "response" : "[ {\n  \"audit\" : {\n    \"createdBy\" : \"system\",\n    \"createdDate\" : \"2023-05-27T12:00:00\",\n    \"lastModifiedBy\" : \"user-1\",\n    \"lastModifiedDate\" : \"2023-06-01T12:00:00\",\n    \"version\" : 1\n  },\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\",\n  \"uid\" : \"bb895294-efe7-484b-b670-14d004eaf461\"\n} ]",
   "responseHeaders" : {
-    "x-device-identifier" : "a7ce26d4-b3d5-43e3-b845-811eca457ba9",
-    "x-correlation-id" : "9105ff0f-5aaf-445c-afb2-f2337ca8f51d",
-    "x-b3-traceid" : "aefb597a-9588-4d50-a637-c7beb079b5aa"
+    "x-device-identifier" : "aa0dfafd-8880-4901-b5f9-2e8d8bcb0c50",
+    "x-correlation-id" : "ac1fe45f-fd0d-4db4-920e-60a2ec4ff041",
+    "x-b3-traceid" : "0944dc7f-6827-4912-b730-0462882522e5"
   },
   "status" : 200,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "PATCH"
 }

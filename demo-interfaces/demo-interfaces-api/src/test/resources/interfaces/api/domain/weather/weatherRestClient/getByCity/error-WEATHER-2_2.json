@@ -1,0 +1,29 @@
+{
+  "contentType" : "application/json",
+  "encoding" : "UTF-8",
+  "errorCode" : {
+    "statusCode" : 404,
+    "domain" : "WEATHER",
+    "errorCode" : "WEATHER-2_2",
+    "errorType" : "functional",
+    "message" : "weather not found",
+    "exploitationError" : false,
+    "rollbackRequire" : false,
+    "retryable" : false
+  },
+  "requestHeaders" : {
+    "x-device-identifier" : "4eef91cd-a778-4752-a091-e216eed76eef",
+    "x-correlation-id" : "8efa7b64-76af-416e-a47d-4c42bde0a314"
+  },
+  "requestParams" : {
+    "city" : "versoix"
+  },
+  "responseHeaders" : {
+    "x-device-identifier" : "4eef91cd-a778-4752-a091-e216eed76eef",
+    "x-correlation-id" : "8efa7b64-76af-416e-a47d-4c42bde0a314",
+    "x-b3-traceid" : "5d2bd3a1-11dc-4e03-8d1b-ced02b22692a"
+  },
+  "status" : 404,
+  "url" : "ws/weather/{city}",
+  "verb" : "GET"
+}

@@ -3,16 +3,16 @@
   "encoding" : "UTF-8",
   "request" : "[ {\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\"\n} ]",
   "requestHeaders" : {
-    "x-device-identifier" : "a3bb49a3-b408-469f-8598-2f51bb7d4d74",
-    "x-correlation-id" : "f525874d-dfe6-4ebf-b646-26996fe2625d"
+    "x-device-identifier" : "e932ccb4-8e46-4191-a6bc-febce7da0e38",
+    "x-correlation-id" : "b144895b-6561-4f51-b45f-a0a4ee2d578f"
   },
   "response" : "[ {\n  \"audit\" : {\n    \"createdBy\" : \"system\",\n    \"createdDate\" : \"2023-05-27T12:00:00\",\n    \"lastModifiedBy\" : \"user-1\",\n    \"lastModifiedDate\" : \"2023-06-01T12:00:00\",\n    \"version\" : 1\n  },\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\",\n  \"uid\" : \"bb895294-efe7-484b-b670-14d004eaf461\"\n} ]",
   "responseHeaders" : {
-    "x-device-identifier" : "a3bb49a3-b408-469f-8598-2f51bb7d4d74",
-    "x-correlation-id" : "f525874d-dfe6-4ebf-b646-26996fe2625d",
-    "x-b3-traceid" : "c6a6c77e-3a39-49f5-9de1-5017ff0edacd"
+    "x-device-identifier" : "e932ccb4-8e46-4191-a6bc-febce7da0e38",
+    "x-correlation-id" : "b144895b-6561-4f51-b45f-a0a4ee2d578f",
+    "x-b3-traceid" : "f9d796e2-dd9d-4818-a0f2-975bac7f6eec"
   },
   "status" : 200,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "POST"
 }

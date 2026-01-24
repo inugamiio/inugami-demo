@@ -12,15 +12,15 @@
     "retryable" : false
   },
   "requestHeaders" : {
-    "x-device-identifier" : "f5f44184-1ed4-4168-9240-f1cc728a59b9",
-    "x-correlation-id" : "5651ec6d-c061-4f3b-bff2-4bea0987e36c"
+    "x-device-identifier" : "e8d1d364-f066-4575-a9b3-4b9e8912817a",
+    "x-correlation-id" : "238510e4-58da-4f7a-b06c-fac20d96a518"
   },
   "responseHeaders" : {
-    "x-device-identifier" : "f5f44184-1ed4-4168-9240-f1cc728a59b9",
-    "x-correlation-id" : "5651ec6d-c061-4f3b-bff2-4bea0987e36c",
-    "x-b3-traceid" : "b23d213b-006e-4ff4-8ea0-6d2dbafefaaa"
+    "x-device-identifier" : "e8d1d364-f066-4575-a9b3-4b9e8912817a",
+    "x-correlation-id" : "238510e4-58da-4f7a-b06c-fac20d96a518",
+    "x-b3-traceid" : "86858e06-9770-4c73-b519-97f016bbfa54"
   },
   "status" : 404,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "DELETE"
 }

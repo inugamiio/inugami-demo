@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MOCK_GENERATOR" type="JUnit" factoryName="JUnit">
+    <module name="demo-interfaces-core" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="directory" />
+    <option name="VM_PARAMETERS" value="-ea -Dmock.generator.path=../demo-interfaces-api/" />
+    <dir value="$PROJECT_DIR$/demo-interfaces/demo-interfaces-core/src/test/java" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

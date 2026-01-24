@@ -1,0 +1,28 @@
+[ {
+  "errorStatus" : 400,
+  "errorCode" : "WEATHER-2_0",
+  "message" : "city required",
+  "errorType" : "functional",
+  "errorDomain" : "WEATHER",
+  "exploitationError" : false,
+  "rollback" : false,
+  "retryable" : false
+}, {
+  "errorStatus" : 400,
+  "errorCode" : "WEATHER-2_1",
+  "message" : "unknown city",
+  "errorType" : "functional",
+  "errorDomain" : "WEATHER",
+  "exploitationError" : false,
+  "rollback" : false,
+  "retryable" : false
+}, {
+  "errorStatus" : 404,
+  "errorCode" : "WEATHER-2_2",
+  "message" : "weather not found",
+  "errorType" : "functional",
+  "errorDomain" : "WEATHER",
+  "exploitationError" : false,
+  "rollback" : false,
+  "retryable" : false
+} ]

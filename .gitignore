@@ -50,3 +50,6 @@ pom.xml.versionsBackup
 /legacy/
 /legacy/__inugami/
 /local-integration-test/elasticsearch/data/
+*.iml
+node_modules
+.idea

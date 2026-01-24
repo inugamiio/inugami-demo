@@ -13,15 +13,15 @@
   },
   "request" : "[ {\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\",\n  \"uid\" : \"bb895294-efe7-484b-b670-14d004eaf461\"\n} ]",
   "requestHeaders" : {
-    "x-device-identifier" : "0505cf9e-8d4d-4204-bcd9-df9717a0af66",
-    "x-correlation-id" : "13ae9d25-ca33-460e-8782-21c1e5c9be49"
+    "x-device-identifier" : "1ab1a748-f091-4891-b0ba-560f6fc97204",
+    "x-correlation-id" : "1c23f911-18d9-4ee1-9af6-310bb61e8dcd"
   },
   "responseHeaders" : {
-    "x-device-identifier" : "0505cf9e-8d4d-4204-bcd9-df9717a0af66",
-    "x-correlation-id" : "13ae9d25-ca33-460e-8782-21c1e5c9be49",
-    "x-b3-traceid" : "0a43f39e-44d1-4b4b-a60e-0b166cc046ca"
+    "x-device-identifier" : "1ab1a748-f091-4891-b0ba-560f6fc97204",
+    "x-correlation-id" : "1c23f911-18d9-4ee1-9af6-310bb61e8dcd",
+    "x-b3-traceid" : "4130c546-678a-4a9e-899a-013c8188c1a7"
   },
   "status" : 404,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "PATCH"
 }

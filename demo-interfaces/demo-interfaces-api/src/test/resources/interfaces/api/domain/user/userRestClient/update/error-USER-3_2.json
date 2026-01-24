@@ -13,15 +13,15 @@
   },
   "request" : "[ {\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\",\n  \"uid\" : \"bb895294-efe7-484b-b670-14d004eaf461\"\n} ]",
   "requestHeaders" : {
-    "x-device-identifier" : "dc6fc086-422e-48b3-84d3-b0383f053be9",
-    "x-correlation-id" : "ab711fbb-a3e4-42ff-b142-039c4e4c2106"
+    "x-device-identifier" : "6636a461-0a8c-4a2d-9941-8d36301f7027",
+    "x-correlation-id" : "41a6a0b6-db25-433c-8413-133d8d183f6f"
   },
   "responseHeaders" : {
-    "x-device-identifier" : "dc6fc086-422e-48b3-84d3-b0383f053be9",
-    "x-correlation-id" : "ab711fbb-a3e4-42ff-b142-039c4e4c2106",
-    "x-b3-traceid" : "4206977e-6cb6-442e-86fa-f2608a0fd75b"
+    "x-device-identifier" : "6636a461-0a8c-4a2d-9941-8d36301f7027",
+    "x-correlation-id" : "41a6a0b6-db25-433c-8413-133d8d183f6f",
+    "x-b3-traceid" : "bb1cc003-3698-4fc6-8d56-bce680aed936"
   },
   "status" : 400,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "PATCH"
 }

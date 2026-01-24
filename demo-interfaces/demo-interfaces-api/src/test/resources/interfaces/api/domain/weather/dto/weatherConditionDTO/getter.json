@@ -1,0 +1,12 @@
+{
+  "getCode" : "OVERCAST",
+  "getElevation" : 387.0,
+  "getIcon" : "cloudy-dense",
+  "getLabel" : "cloudy-dense",
+  "getLatitude" : 46.28,
+  "getLongitude" : 6.1599994,
+  "getTemperature" : 2.1,
+  "getTime" : "2023-06-01T12:00:00",
+  "getWeathercode" : 3,
+  "getWindspeed" : 8.6
+}

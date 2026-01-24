@@ -4,7 +4,10 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password:
-
+application:
+  partners:
+    openmeteo:
+      base-url: "http://localhost:${wiremock.port}"
 jpa:
   database-platform: org.hibernate.dialect.H2Dialect
   hibernate:
@@ -13,3 +16,8 @@ jpa:
   properties:
     hibernate:
       format_sql: true
+
+inugami:
+  monitoring:
+    feign:
+      ssrf-enabled: false

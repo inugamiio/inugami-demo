@@ -1,6 +1,7 @@
 package com.my.project.interfaces.feign;
 
 import com.my.project.interfaces.api.domain.user.UserRestClient;
+import com.my.project.interfaces.api.domain.weather.WeatherRestClient;
 import feign.Client;
 import feign.Contract;
 import feign.RequestInterceptor;
@@ -58,6 +59,10 @@ public class ProjectFeignConfiguration {
     @Bean
     public UserRestClient userRestClient(final FeignBuilder inugamiFeignBuilder) {
         return inugamiFeignBuilder.buildClient(UserRestClient.class);
+    }
+    @Bean
+    public WeatherRestClient weatherRestClient(final FeignBuilder inugamiFeignBuilder) {
+        return inugamiFeignBuilder.buildClient(WeatherRestClient.class);
     }
 
 }

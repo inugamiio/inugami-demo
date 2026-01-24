@@ -1,0 +1,29 @@
+{
+  "contentType" : "application/json",
+  "encoding" : "UTF-8",
+  "errorCode" : {
+    "statusCode" : 400,
+    "domain" : "WEATHER",
+    "errorCode" : "WEATHER-2_1",
+    "errorType" : "functional",
+    "message" : "unknown city",
+    "exploitationError" : false,
+    "rollbackRequire" : false,
+    "retryable" : false
+  },
+  "requestHeaders" : {
+    "x-device-identifier" : "8eec930e-9e97-43a5-931c-272826f93505",
+    "x-correlation-id" : "59d2986c-4ee7-47d6-8723-b92ccfc0d689"
+  },
+  "requestParams" : {
+    "city" : "versoix"
+  },
+  "responseHeaders" : {
+    "x-device-identifier" : "8eec930e-9e97-43a5-931c-272826f93505",
+    "x-correlation-id" : "59d2986c-4ee7-47d6-8723-b92ccfc0d689",
+    "x-b3-traceid" : "cc9ba598-5a51-4779-93dd-0d7bd6b6b066"
+  },
+  "status" : 400,
+  "url" : "ws/weather/{city}",
+  "verb" : "GET"
+}

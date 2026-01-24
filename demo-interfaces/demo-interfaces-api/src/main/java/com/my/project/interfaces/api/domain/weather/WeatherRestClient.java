@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface WeatherRestClient {
 
     @GenericHeaders
+    @WeatherRestClientDOC.DocGetByCity
     @GetMapping(path = "{city}", produces = MediaType.APPLICATION_JSON_VALUE)
     WeatherConditionAPI getByCity(@PathVariable(required = true) final String city);
 

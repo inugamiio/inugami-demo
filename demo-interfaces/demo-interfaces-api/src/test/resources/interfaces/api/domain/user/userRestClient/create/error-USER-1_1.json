@@ -13,15 +13,15 @@
   },
   "request" : "[ {\n  \"email\" : \"john.smith@mock.org\",\n  \"firstName\" : \"John\",\n  \"lastName\" : \"Smith\"\n} ]",
   "requestHeaders" : {
-    "x-device-identifier" : "67d794ca-3b67-4179-a709-8bcc728e7bf3",
-    "x-correlation-id" : "cdf9ed8c-71a6-494d-a9a9-2ce43bd760c9"
+    "x-device-identifier" : "eab7fa54-31f1-4a7e-91fc-bff44cb564aa",
+    "x-correlation-id" : "8474425c-82e7-485e-b0c0-bb2b4ebe6e74"
   },
   "responseHeaders" : {
-    "x-device-identifier" : "67d794ca-3b67-4179-a709-8bcc728e7bf3",
-    "x-correlation-id" : "cdf9ed8c-71a6-494d-a9a9-2ce43bd760c9",
-    "x-b3-traceid" : "173a327b-a359-4d22-8f26-37ef96017f7f"
+    "x-device-identifier" : "eab7fa54-31f1-4a7e-91fc-bff44cb564aa",
+    "x-correlation-id" : "8474425c-82e7-485e-b0c0-bb2b4ebe6e74",
+    "x-b3-traceid" : "65b15f21-88c0-414d-8869-6302816c892b"
   },
   "status" : 400,
-  "url" : "/user",
+  "url" : "ws/user",
   "verb" : "POST"
 }

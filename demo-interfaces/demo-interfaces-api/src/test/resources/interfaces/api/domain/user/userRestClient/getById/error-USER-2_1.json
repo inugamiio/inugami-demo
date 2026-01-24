@@ -12,18 +12,18 @@
     "retryable" : false
   },
   "requestHeaders" : {
-    "x-device-identifier" : "3e76cbc1-26fc-4077-8de3-bcb2aef42d67",
-    "x-correlation-id" : "d3cb32ff-0bee-4255-8cfd-8af21f1df52c"
+    "x-device-identifier" : "9223268a-9477-4c43-b04c-1f25427e8dd8",
+    "x-correlation-id" : "70f15383-3412-45b0-8ca9-dac0856a5cbc"
   },
   "requestParams" : {
     "id" : "bb895294-efe7-484b-b670-14d004eaf461"
   },
   "responseHeaders" : {
-    "x-device-identifier" : "3e76cbc1-26fc-4077-8de3-bcb2aef42d67",
-    "x-correlation-id" : "d3cb32ff-0bee-4255-8cfd-8af21f1df52c",
-    "x-b3-traceid" : "108f08d6-9154-4446-a036-65c9358af8e2"
+    "x-device-identifier" : "9223268a-9477-4c43-b04c-1f25427e8dd8",
+    "x-correlation-id" : "70f15383-3412-45b0-8ca9-dac0856a5cbc",
+    "x-b3-traceid" : "68a34c76-d9d8-42cd-aef2-7ef2a3cab2c7"
   },
   "status" : 404,
-  "url" : "/user/{id}",
+  "url" : "ws/user/{id}",
   "verb" : "GET"
 }
